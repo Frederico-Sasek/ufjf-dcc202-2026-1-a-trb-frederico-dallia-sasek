@@ -11,7 +11,7 @@ const moviment = document.querySelector("#move");
 const torre1 = document.querySelector("#tower-1");
 const torre2 = document.querySelector("#tower-2");
 const torre3 = document.querySelector("#tower-3");
-const pole = document.querySelectorAll(".pole");
+
 
 torre1.addEventListener("click", () => selecionar(a, torre1));
 torre2.addEventListener("click", () => selecionar(b, torre2));
@@ -69,6 +69,14 @@ function selecionar(indice, torre) {
   }
 }
 
+function nomeDaTorre(torre) {
+  if (torre === a) return "A";
+  if (torre === b) return "B";
+  return "C";
+}
+
+
+
 function moverDisco(t1, t2) {
   const tam1 = t1.length;
   const tam2 = t2.length;
@@ -77,6 +85,10 @@ function moverDisco(t1, t2) {
   } else {
     if (t1.length !== 0) {
       t2.push(t1.pop());
+      const text = nomeDaTorre(t1) +  " => " + nomeDaTorre(t2);
+      const novoLi = document.createElement("li");
+      historico.append(novoLi);
+      novoLi.textContent = text;
       move = move + 1;
       moviment.textContent = move;
     }

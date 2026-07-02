@@ -5,22 +5,43 @@
 }
 
 h1,
-.move {
+.move,
+p {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 20px;
 }
 
 body {
   overflow: auto;
   resize: both;
+}
+ol {
+  border: solid;
+  width: 600px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+li {
+    margin-left: 100px;
+}
+
+div > span {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 1;
+  height: 15px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
 }
 
 .tower {
@@ -48,20 +69,6 @@ body {
 
 .texto {
   align-items: end;
-}
-
-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1px;
-}
-
-div > span {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  border: 1;
-  height: 15px;
 }
 
 .s1 {
