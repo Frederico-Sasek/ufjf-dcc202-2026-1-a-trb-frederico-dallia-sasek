@@ -22,7 +22,7 @@ btnVoltar.addEventListener("click", voltar);
 
 function iniciarJogo() {
   move = 0;
-  selecionado = 0;
+  selecionado = null;
   a = [8, 7, 6, 5, 4, 3, 2, 1];
   b = [];
   c = [];
@@ -54,7 +54,7 @@ function criaDisco(disckSize, torre) {
   torre.append(novoDisk);
 }
 function selecionar(indice, torre) {
-  if (selecionado === 0) {
+  if (selecionado === null) {
     selecionado = indice;
     torreSelecionada = torre;
     torre.classList.add("selecionar");
@@ -62,7 +62,7 @@ function selecionar(indice, torre) {
     if (selecionado !== indice) {
       moverDisco(selecionado, indice, true);
     }
-    selecionado = 0;
+    selecionado = null;
     torreSelecionada.classList.remove("selecionar");
     torreSelecionada = null;
   }
