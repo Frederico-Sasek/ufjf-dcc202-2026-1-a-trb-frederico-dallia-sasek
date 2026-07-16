@@ -37,6 +37,7 @@ div > span {
   padding: 0;
   border: 1px;
   height: 15px;
+  border-radius: 6px;
 }
 
 section {
@@ -71,6 +72,7 @@ button {
   height: 200px;
   bottom: 42px;
   background: black;
+  border-radius: 12px;
 }
 
 .texto {

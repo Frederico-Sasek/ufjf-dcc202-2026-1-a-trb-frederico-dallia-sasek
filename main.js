@@ -80,7 +80,6 @@ function torreDaNome(torre) {
 function moverDisco(t1, t2, condicao) {
   const tam1 = t1.length;
   const tam2 = t2.length;
-  console.log("BUCETA");
   if (tam2 > 0 && t1[tam1 - 1] > t2[tam2 - 1]) {
     moviment.textContent = "JOGADA INVALIDA";
   } else {
